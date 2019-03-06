@@ -1,3 +1,5 @@
 # Ignore virtualenv
 .DS_Store
+*.pyc
+dist
 env
