@@ -1,3 +1,5 @@
 # Ignore virtualenv
 .DS_Store
+.ipynb_checkpoints
 env
+models

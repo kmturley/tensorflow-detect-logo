@@ -10,21 +10,24 @@ Example Machine Learning project using:
 
 Install dependencies using:
 
-    virtualenv env
-    source env/bin/activate
-    pip install -r requirements.txt
+    docker-compose build
 
 
 ## Usage
 
-Train the model using:
+Run TensorFlow using:
 
-    python index.py
+    docker-compose up
+
+View Jupiter notebooks at:
+
+    http://localhost:8888/tree
 
 
 ## Directory structure
 
     /images         --> Training images (sorted into folders by class)
+    /notebooks      --> Jupiter notebooks directory
     /test           --> Test images
 
 
