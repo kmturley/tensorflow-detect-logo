@@ -17,15 +17,31 @@ Install dependencies using:
 
 ## Usage
 
-Train the model using:
+Retrain the model using:
 
-    python index.py
+    python -m src.retrain \
+        --bottleneck_dir=dist/bottlenecks \
+        --how_many_training_steps=500 \
+        --model_dir=dist/models \
+        --summaries_dir=dist/summaries \
+        --output_graph=dist/retrained_graph.pb \
+        --output_labels=dist/retrained_labels.txt \
+        --architecture="mobilenet_0.50_224" \
+        --image_dir=src/images
+
+
+Test the model using:
+
+    python -m src.classify \
+        --graph=dist/retrained_graph.pb  \
+        --labels=dist/retrained_labels.txt \
+        --image=src/images_test/test1.jpg
 
 
 ## Directory structure
 
-    /images         --> Training images (sorted into folders by class)
-    /test           --> Test images
+    /dist           --> Compiled files after training (bottlenecks, models, summeries, graphs, labels)
+    /src            --> Source files
 
 
 ## Contact
