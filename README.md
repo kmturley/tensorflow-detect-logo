@@ -38,6 +38,18 @@ Test the model using:
         --labels=dist/retrained_labels.txt \
         --image=src/images_test/o1.jpg
 
+Run monitor and inspecting tool:
+
+    tensorboard --logdir dist/summaries &
+
+View training stats:
+
+    http://localhost:6006/
+
+Stop monitoring and inspecting:
+
+    pkill -f "tensorboard"
+
 
 ## Results
 
@@ -51,7 +63,7 @@ Test the model using:
 
 ## Directory structure
 
-    /dist           --> Compiled files after training (bottlenecks, models, summeries, graphs, labels)
+    /dist           --> Compiled files after training (bottlenecks, models, summaries, graphs, labels)
     /src            --> Source files
 
 
