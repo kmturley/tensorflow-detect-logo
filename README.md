@@ -39,6 +39,16 @@ Test the model using:
         --image=src/images_test/o1.jpg
 
 
+## Results
+
+| Old Logo                          | New Logo                          |
+:----------------------------------:|:----------------------------------:
+![](https://github.com/kmturley/tensorflow-detect-logo/raw/master/src/images_test/o1.jpg)  |  ![](https://github.com/kmturley/tensorflow-detect-logo/raw/master/src/images_test/n1.jpg)
+| Evaluation time (1-image): 0.285s | Evaluation time (1-image): 0.261s |
+| old (score=0.92341)               | new (score=0.98649)               |
+| new (score=0.07659)               | old (score=0.01351)               |
+
+
 ## Directory structure
 
     /dist           --> Compiled files after training (bottlenecks, models, summeries, graphs, labels)
