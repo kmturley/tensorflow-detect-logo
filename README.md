@@ -27,7 +27,8 @@ Retrain the model using:
         --output_graph=dist/retrained_graph.pb \
         --output_labels=dist/retrained_labels.txt \
         --architecture="mobilenet_0.50_224" \
-        --image_dir=src/images
+        --image_dir=src/images \
+        --learning_rate=0.005
 
 
 Test the model using:
@@ -35,7 +36,7 @@ Test the model using:
     python -m src.classify \
         --graph=dist/retrained_graph.pb  \
         --labels=dist/retrained_labels.txt \
-        --image=src/images_test/test1.jpg
+        --image=src/images_test/o1.jpg
 
 
 ## Directory structure
